@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -24,10 +25,14 @@ export default function () {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Home</NavLink>
+              <NavLink>
+                <Link to="/">Home</Link>
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="#">Products</NavLink>
+              <NavLink>
+                <Link to="/products">Products</Link>
+              </NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/">Cart</NavLink>
@@ -38,10 +43,10 @@ export default function () {
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
-                  Signed in
+                  <Link to="/login">Sign in</Link>
                 </DropdownItem>
                 <DropdownItem>
-                  Signed up
+                <Link to="/login">Sign up</Link>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>

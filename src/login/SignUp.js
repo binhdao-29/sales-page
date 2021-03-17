@@ -15,13 +15,29 @@ export default function () {
                     <Label for="examplePassword">Password</Label>
                     <Input type="password" name="password" id="examplePassword" placeholder="Enter your password" />
                 </FormGroup>
+                <FormGroup>
+                    <Label for="phoneNumber">Phone Number</Label>
+                    <Input type="text" name="phoneNumber" id="phoneNumber" placeholder="Your phone number" />
+                </FormGroup>
+                <FormGroup>
+                    <Label for="exampleSelect">Gender</Label>
+                    <Input type="select" name="select" id="exampleSelect">
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </Input>
+                </FormGroup>
+                <FormGroup>
+                    <Label for="avatar">Avatar</Label>
+                    <Input type="file" name="file" id="avatar" />
+                </FormGroup>
                 <FormGroup check>
                     <Label check>
                         <Input type="checkbox" />{' '}
-                        Remember your password?
+                        I agree to the terms of service
                     </Label>
                 </FormGroup>
-                <Button>Sign In</Button>
+                <Button>Sign Up</Button>
             </Form>
         </Container>
     </div>

@@ -43,10 +43,14 @@ export default function () {
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
-                  <Link to="/login">Sign in</Link>
+                  <NavLink>
+                    <Link to="/login">Sign in</Link>
+                  </NavLink> 
                 </DropdownItem>
                 <DropdownItem>
-                <Link to="/login">Sign up</Link>
+                  <NavLink>
+                    <Link to="/signup">Sign up</Link>
+                  </NavLink> 
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>

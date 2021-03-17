@@ -29,7 +29,7 @@ export default function (props) {
   return (
     <Container>
       <h2>Product</h2>
-      <div class={classNames('lds-ellipsis', {loaded : isLoaded})}><div></div><div></div><div></div><div></div></div>
+      <div className={classNames('lds-ellipsis', {loaded : isLoaded})}><div></div><div></div><div></div><div></div></div>
       <Row>
         {
           products.map( product => (

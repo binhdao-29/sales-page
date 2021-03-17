@@ -7,8 +7,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Product from './components/Product';
-import SignUp from './login/SignUp';
-import SignIn from './login/SignIn';
+import SignUp from './components/login/SignUp';
+import SignIn from './components/login/SignIn';
 
 
 function App() {

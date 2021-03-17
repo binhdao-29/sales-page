@@ -9,11 +9,6 @@ import Home from './components/Home';
 import Product from './components/Product';
 import SignIn from './login/SignIn';
 
-// const mongoose = require('mongoose');
-// mongoose.connect('mongodb://localhost/sales-page');
-var mongoose = require('mongoose');
-
-mongoose.connect('mongodb://localhost/express-demo');
 
 function App() {
   return (

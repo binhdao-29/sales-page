@@ -5,6 +5,7 @@ const PORT = 4000;
 const cors = require('cors');
 const mongoose = require('mongoose');
 const config = require('./db');
+const productRoute = require('../routes/product.route');
 
 mongoose.Promise = global.Promise;
 mongoose.connect(config.db, { useNewUrlParser: true }).then(
@@ -15,6 +16,8 @@ mongoose.connect(config.db, { useNewUrlParser: true }).then(
 app.use(cors());
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
+
+app.use('/products', productRoute);
 
 app.get('/', (req, res) => {
   res.send('Server is running...')

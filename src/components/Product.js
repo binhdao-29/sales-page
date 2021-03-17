@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Container,
   Row,
@@ -10,10 +10,16 @@ import {
   CardTitle,
   Button
 } from "reactstrap";
-
+import axios from 'axios';
 
 export default function (props) {
   const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    axios.get("http://localhost:4000/products").then((res) => {
+      setProducts(res.data)
+    });
+  }, [])
 
   return (
     <Container>

@@ -20,7 +20,7 @@ export default function () {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
+        <NavbarBrand href="/">ShoppingMalls</NavbarBrand>
         <NavbarToggler onClick={() => setIsOpen(!isOpen)} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>

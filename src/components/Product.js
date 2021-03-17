@@ -11,19 +11,25 @@ import {
   Button
 } from "reactstrap";
 import axios from 'axios';
+import classNames from 'classnames';
+
+import './Loading.css';
 
 export default function (props) {
   const [products, setProducts] = useState([]);
+  const [isLoaded, setLoaded] = useState(false);
 
   useEffect(() => {
     axios.get("http://localhost:4000/products").then((res) => {
-      setProducts(res.data)
+      setProducts(res.data);
+      setLoaded(true);
     });
   }, [])
 
   return (
     <Container>
       <h2>Product</h2>
+      <div class={classNames('lds-ellipsis', {loaded : isLoaded})}><div></div><div></div><div></div><div></div></div>
       <Row>
         {
           products.map( product => (

@@ -15,7 +15,7 @@ import {
   NavbarText
 } from 'reactstrap';
 
-export default function () {
+export default function TopMenu() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div>

@@ -1,11 +1,12 @@
 import React from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText, Container } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, Container } from 'reactstrap';
 
 import './Login.css';
 
-export default function () {
+export default function SignIn() {
     return <div className="SignUp">
         <Container>
+            <h1 style={{marginBottom: 40}}>Login</h1>
             <Form>
                 <FormGroup>
                     <Label for="exampleEmail">Email</Label>

@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText, Container } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, Container } from 'reactstrap';
 import axios from 'axios';
 
 import './Login.css';
-import { on } from '../../models/user.model';
 
-export default function (props) {
+export default function SignUp(props) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
@@ -38,6 +37,7 @@ export default function (props) {
 
     return <div className="SignUp">
         <Container>
+            <h1 style={{marginBottom: 40}}>Sign Up</h1>
             <Form onSubmit={onSubmit}>
                 <FormGroup>
                     <Label for="exampleEmail">Email</Label>

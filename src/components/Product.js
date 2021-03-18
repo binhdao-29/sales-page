@@ -15,7 +15,7 @@ import classNames from 'classnames';
 
 import './Loading.css';
 
-export default function (props) {
+export default function Product(props) {
   const [products, setProducts] = useState([]);
   const [isLoaded, setLoaded] = useState(false);
 

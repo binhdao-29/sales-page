@@ -62,7 +62,10 @@ const Advertisement = (props) => {
   });
   const src = 'https://salt.tikicdn.com/cache/w408/ts/banner/aa/3b/b3/403c766e847f8a4509ad21f6cadcb6bb.jpg';
   return (
-    <div style={{ display: 'flex', marginTop : 50, marginLeft : 100}}>
+    <div style={{ display: 'flex', 
+                  marginTop : 50, 
+                  marginLeft : 100,
+                  marginBottom: 70}}>
       <div style={{width: 800, display: 'inline-block'}}>
         <style>
           {

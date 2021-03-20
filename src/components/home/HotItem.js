@@ -8,11 +8,13 @@ import {
   CardText,
   CardBody,
   CardTitle,
-  Button
+  Button,
+  Form
 } from "reactstrap";
 import axios from 'axios';
 
 import lighting from '../../img/lighting.svg';
+import { CartContext } from '../../context/CartProvider';
 
 export default function HotItem(props) {
   const [products, setProducts] = useState([]);
@@ -40,7 +42,11 @@ export default function HotItem(props) {
                 <CardBody>
                   <CardTitle tag="h5">{product.name}</CardTitle>
                   <CardText>{product.description}</CardText>
-                  <Button>Button</Button>
+                  <CartContext.Consumer>
+                      {({ addToCart }) => (
+                        <Button onClick={addToCart}>Add to cart</Button>
+                      )}
+                    </CartContext.Consumer>
                 </CardBody>
               </Card>
             </Col>

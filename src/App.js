@@ -8,18 +8,21 @@ import Home from './components/home/Home';
 import Product from './components/Product';
 import SignUp from './components/login/SignUp';
 import SignIn from './components/login/SignIn';
+import { CartProvider } from './context/CartProvider';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Navbar />
-        <Route path="/" exact component={Home} />
-        <Route path="/products/" exact component={Product} />
-        <Route path="/login" exact component={SignIn} />
-        <Route path="/signup" exact component={SignUp} />
-      </div>
-    </Router> 
+    <CartProvider>
+      <Router>
+        <div className="App">
+          <Navbar />
+          <Route path="/" exact component={Home} />
+          <Route path="/products/" exact component={Product} />
+          <Route path="/login" exact component={SignIn} />
+          <Route path="/signup" exact component={SignUp} />
+        </div>
+      </Router>
+    </CartProvider>
   );
 }
 

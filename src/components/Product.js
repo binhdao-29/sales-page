@@ -14,6 +14,7 @@ import axios from 'axios';
 import classNames from 'classnames';
 
 import './Loading.css';
+import { CartContext, CartProvider } from '../context/CartProvider';
 
 export default function Product(props) {
   const [products, setProducts] = useState([]);
@@ -41,7 +42,11 @@ export default function Product(props) {
                 <CardBody>
                   <CardTitle tag="h5">{product.name}</CardTitle>
                   <CardText>{product.description}</CardText>
-                  <Button>Button</Button>
+                    <CartContext.Consumer>
+                      {({ addToCart }) => (
+                        <Button onClick={addToCart}>Add to cart</Button>
+                      )}
+                    </CartContext.Consumer>
                 </CardBody>
               </Card>
             </Col>

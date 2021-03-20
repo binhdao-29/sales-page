@@ -16,17 +16,18 @@ import {
   Button
 } from 'reactstrap';
 
+import { CartContext } from '../context/CartProvider';
 import loupe from '../img/loupe.svg';
 import shoppingBag from '../img/shopping-bags.svg';
 import cart from '../img/shopping-cart.svg';
 
-export default function TopMenu() {
+export default function TopMenu(props) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
       <Navbar color="light" light expand="md">
         <NavbarBrand href="/">
-          <div style={{display: 'flex', marginTop: '5px'}}>
+          <div style={{display: 'flex'}}>
             <img src={shoppingBag} width={32} height={32} />
             <p style={{ marginLeft : '5px', color:'#f53d2d', fontSize: 28}}>Shopping</p>
           </div>
@@ -72,7 +73,12 @@ export default function TopMenu() {
             </NavItem>
             <NavItem>
               <NavLink href="/">
-                <img src={cart} width={38} height={38} />
+                <CartContext.Consumer>
+                  {({cartItems}) => (
+                    <Link to="/products"><img src={cart} width={38} height={38} />
+                    <h5 style={{display: 'inline', marginLeft: 10, color : '#000'}}>({cartItems.length})</h5></Link>
+                  )}
+                </CartContext.Consumer>
               </NavLink>
             </NavItem>
           </Nav>

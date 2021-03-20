@@ -10,7 +10,6 @@ import {
   CardTitle,
   Button
 } from "reactstrap";
-import {Animated} from "react-animated-css";
 import axios from 'axios';
 
 import lighting from '../../img/lighting.svg';

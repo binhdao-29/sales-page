@@ -28,8 +28,10 @@ export default function Product(props) {
 
   return (
     <Container>
-      <h2>Product</h2>
-      <div className={classNames('lds-ellipsis', {loaded : isLoaded})}><div></div><div></div><div></div><div></div></div>
+      <div style={{textAlign : 'center', marginTop: '10px'}}>
+        <h2>Product</h2>
+        <div className={classNames('lds-ellipsis', {loaded : isLoaded})}><div></div><div></div><div></div><div></div></div>
+      </div>
       <Row>
         {
           products.map( product => (
